@@ -10,15 +10,21 @@ class Perimeter {
 
     Perimeter()
     {
-        
+        this.sides = new float[0];
+        // System.out.println("Perimeter without any arguments");
     }
 
     double getPerimeter(){
         double perimeter = 0;
 
-        for (float side : sides)
+        // for (float side : sides)
+        // {
+        //     perimeter += side;
+        // }
+
+        for (int i = 0; i < sides.length ; i++)
         {
-            perimeter += side;
+            perimeter += sides[i];
         }
 
         return perimeter;
