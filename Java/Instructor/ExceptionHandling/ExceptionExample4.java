@@ -1,3 +1,12 @@
+/*
+ * 
+ * 
+ * Multiple catch definitions for a single try block
+ * 
+ * 
+ */
+
+
 public class ExceptionExample4{
 
     public static void main(String[] args) {

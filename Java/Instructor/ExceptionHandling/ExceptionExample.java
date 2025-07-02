@@ -1,3 +1,11 @@
+/*
+ * 
+ * Basic Exception at runtime
+ * 
+ * 
+ */
+
+
 public class ExceptionExample{
 
     public static void main(String[] args) {

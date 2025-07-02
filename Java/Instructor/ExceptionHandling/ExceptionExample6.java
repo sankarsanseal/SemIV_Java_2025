@@ -1,3 +1,11 @@
+/*
+ * 
+ * An example of usage of throws keyword.
+ * 
+ * 
+ */
+
+
 public class ExceptionExample6 extends Throwable{
 
     ExceptionExample6(){

@@ -1,3 +1,9 @@
+/*
+ * 
+ * To run uninterrupted code when there is a runtime exception
+ * 
+ */
+
 public class ExceptionExample2{
 
     public static void main(String[] args) {

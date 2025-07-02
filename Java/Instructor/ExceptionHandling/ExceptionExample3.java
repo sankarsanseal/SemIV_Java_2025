@@ -1,3 +1,10 @@
+/*
+ * 
+ *  When an exception is not defined with respective catch clause.
+ * 
+ */
+
+
 public class ExceptionExample3{
 
     public static void main(String[] args) {

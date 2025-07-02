@@ -1,3 +1,13 @@
+/*
+ * 
+ * 
+ * An example of user-defined exception class
+ * 
+ * 
+ */
+
+
+
 public class ExceptionExample5 extends Throwable{
 
     ExceptionExample5(){
