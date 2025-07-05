@@ -11,9 +11,9 @@ public class ExceptionExample4{
 
     public static void main(String[] args) {
         int var1 = 1;
-        int var0 = 3; // Changed
+        int var0 = 0; // Changed
 
-        int [] arr1= new int [4];
+        int [] arr1= new int [0];
 
         int number_of_exceptions_occured = 0;
 

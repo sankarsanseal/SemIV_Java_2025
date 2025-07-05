@@ -10,7 +10,7 @@ public class ExceptionExample2{
         int var1 = 1;
         int var0 = 0;
 
-        try{
+        try{ //
 
         System.out.println(var1/var0);
 

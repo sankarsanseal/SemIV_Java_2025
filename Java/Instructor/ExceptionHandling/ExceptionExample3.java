@@ -11,7 +11,7 @@ public class ExceptionExample3{
         int var1 = 1;
         int var0 = 3; // Changed
 
-        int [] arr1= new int [0];
+        int [] arr1 = new int [0];
 
         try{
 
