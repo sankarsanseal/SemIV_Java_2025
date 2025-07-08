@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.Date;
 
 
 class SavingAccount extends Account
@@ -7,6 +8,7 @@ class SavingAccount extends Account
 	    float interest_rate;
 	    double interest_accrued;
 	    double interest_paid;
+	    Date last_interest_paid_date;
 	
 	SavingAccount(String account_no , double account_balance , float interest_rate)
 	{
