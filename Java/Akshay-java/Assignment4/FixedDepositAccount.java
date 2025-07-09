@@ -1,22 +1,24 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 class FixedDepositAccount extends Account {
-	private float interest_rate;
-	private double interest_accrued;
-	private double interest_paid;
-	private int tenure_time_in_days;
-	private Date maturity_date;
-	private int payment_frequency;
+	float interest_rate;
+	double interest_accrued;
+	double interest_paid;
+	int tenure_time_in_days;
+	LocalDate maturity_date;
+	int payment_frequency;
+	LocalDate last_interest_paid_date;
 	
-	FixedDepositAccount(String account_no, double account_balance, float interest_rate , int tenure_time_in_days , Date maturity_date , int payment_frequency )
+	FixedDepositAccount(String account_no, double account_balance, LocalDate account_opening_date, float interest_rate , int tenure_time_in_days , LocalDate maturity_date , int payment_frequency ,LocalDate last_interest_paid_date)
 	{
-		super(account_no , account_balance);
+		super(account_no , account_balance ,account_opening_date);
 		this.interest_rate = interest_rate;
 		this.interest_accrued = 0.0;
 		this.interest_paid = 0.0;
 		this.tenure_time_in_days = tenure_time_in_days;
 		this.maturity_date = maturity_date;
 		this.payment_frequency = payment_frequency;
+		this.last_interest_paid_date =  last_interest_paid_date;
 	}
 	
 	float getInterestRate() {
@@ -43,7 +45,8 @@ class FixedDepositAccount extends Account {
 	{
 		return account_balance + interest_paid;
 	}
-	Date getMaturityDate()
+	
+	LocalDate getMaturityDate()
 	{
 		return maturity_date;
 	}

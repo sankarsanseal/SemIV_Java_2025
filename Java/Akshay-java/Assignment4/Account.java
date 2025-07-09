@@ -1,11 +1,11 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 class Account {
-    String account_no;
-    double account_balance;
-	Date account_opening_date;
+	String account_no;
+	double account_balance;
+	LocalDate account_opening_date;
 	
-	Account(String account_no , double account_balance , Date account_opening_date)
+	Account(String account_no , double account_balance , LocalDate account_opening_date)
 	{
 		this.account_no = account_no;
 		this.account_balance = account_balance;
@@ -21,8 +21,8 @@ class Account {
 	{
 		return account_balance;
 	}
-
-	Date getAccountOpeningDate()
+	
+	LocalDate getAccountOpeningDate()
 	{
 		return account_opening_date;
 	}
