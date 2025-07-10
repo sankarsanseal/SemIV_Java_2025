@@ -1,10 +1,23 @@
 import java.time.LocalDate;
+<<<<<<< HEAD
 
 public class SavingAccount extends Account {
 	float interest_rate;
 	double interest_accrued;
 	double interest_paid;
 	LocalDate last_interest_paid_date;
+=======
+import java.time.temporal.ChronoUnit;
+import java.util.Date;
+
+
+class SavingAccount extends Account
+   {
+	    float interest_rate;
+	    double interest_accrued;
+	    double interest_paid;
+	    Date last_interest_paid_date;
+>>>>>>> 868e6c79ea04a9e80b4561d6c77f839674891941
 	
 	public SavingAccount(String account_no , double account_balance , float interest_rate,LocalDate account_opening_date)
 	{
