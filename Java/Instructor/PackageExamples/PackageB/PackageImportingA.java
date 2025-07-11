@@ -3,7 +3,7 @@ package PackageB;
 import PackageA.PackageExampleA;
 // import PackageExamples.PackageA.*;
 
-public class PackageImportingA  extends PackageExampleA
+public class PackageImportingA extends PackageExampleA
 {
 
     public PackageImportingA(int value)

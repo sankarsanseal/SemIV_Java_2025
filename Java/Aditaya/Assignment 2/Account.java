@@ -1,24 +1,20 @@
 /* 
-Parent Class Account to store Account Number, Account Balance and Account Open Date
+Parent Class Account to store Account Number and Account Balance.
 having a constructor to initialize these values,
 and methods to get the values of these attributes.
 
 Author: Aditaya Samui
-Date: 08-07-2025
+Date: 23-06-2025
 */
-
-import java.time.LocalDate;
 
 class Account {
     public String account_no;           //Stores Account number
     public double account_balance;      //Stores current balance in the account
-    public LocalDate account_open_date; //Stores the Date on which account was opened
 
     //Constructor
-    Account(String account_no, double account_balance, LocalDate account_open_date) {
+    Account(String account_no, double account_balance) {
         this.account_no=account_no;
         this.account_balance=account_balance;
-        this.account_open_date=account_open_date;
     }
 
     //Methods
@@ -28,10 +24,6 @@ class Account {
 
     public double getAccountBalance() {
         return account_balance;
-    }
-    
-    public LocalDate getAccountOpenDate() {
-        return account_open_date;
     }
 
 }
