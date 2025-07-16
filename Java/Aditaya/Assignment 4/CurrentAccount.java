@@ -15,14 +15,28 @@ class CurrentAccount extends Account{
     public LocalDate last_overdrawn_date;
 
     //Constructor
-    CurrentAccount(String account_no, double account_balance, double overdraft_limit) {
-        super(account_no, account_balance, LocalDate.now());
+    CurrentAccount(String account_no, double account_balance, LocalDate account_open_date, double overdraft_limit) {
+        super(account_no, account_balance, account_open_date);
         this.overdraft_limit=overdraft_limit;
         last_overdrawn_date=null;         
     }
     
     //Methods
-    public double getOverdraftLimit() {     
+
+    public void withdraw(double amount) {       //method to withdraw amount from the account
+        if (amount > getAccountBalance() + overdraft_limit) {
+            System.out.println("Withdrawal exceeds overdraft limit.");
+        } 
+        
+        else {
+            account_balance -= amount;
+            if (account_balance < 0) {
+                last_overdrawn_date = LocalDate.now(); // Set the date when the account goes overdrawn
+            }
+        }
+    }
+
+    public double getOverdraftLimit() {
         return overdraft_limit;
     }
     

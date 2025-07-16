@@ -9,6 +9,7 @@ Date: 08-07-2025
 */
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 class SavingAccount extends Account {
     public float interest_rate;                 //Stores the percentage a bank pays over time
@@ -17,8 +18,8 @@ class SavingAccount extends Account {
     public LocalDate last_interest_paid_date;   //Stores the date of last paid interest
 
     //Constructor
-    SavingAccount(String account_no, double account_balance, float interest_rate) {
-        super(account_no, account_balance, LocalDate.now());
+    SavingAccount(String account_no, double account_balance, LocalDate account_open_date, float interest_rate) {
+        super(account_no, account_balance, account_open_date);
         this.interest_rate=interest_rate;
         interest_accrued=0.0;
         interest_paid=0.0;
@@ -39,10 +40,26 @@ class SavingAccount extends Account {
     }
 
     public void addInterest() {         //Method to add interest to the account
-        interest_accrued=account_balance*interest_rate/100;
-        account_balance+=interest_accrued;
-        last_interest_paid_date=LocalDate.now();
-        interest_paid+=interest_accrued;
+        
+        // No interest if balance is zero or negative
+        double interest_accrued = 0.0;
+        if (getAccountBalance() <= 0) {
+            return; 
+        }
+        
+        // Initialize if not set
+        if (last_interest_paid_date == null) {
+            last_interest_paid_date = getAccountOpenDate();
+        }
+
+        // Calculate the number of months since the last interest was paid
+        long months = ChronoUnit.MONTHS.between(last_interest_paid_date, LocalDate.now());
+        if (months > 0) {
+            interest_accrued = (getAccountBalance() * interest_rate * months) / (12*100);
+            interest_paid += interest_accrued;
+            account_balance += interest_accrued;
+            last_interest_paid_date = LocalDate.now();
+        }
     }
     
 }

@@ -1,8 +1,6 @@
 /*
 Program to input a decimal number from user and convert it into corresponding binary value
 
-This program can also be done easily using this method: Integer.toBinaryString(n) 
-
 Author: Aditaya Samui
 Date: 10-07-2025
 */
@@ -14,6 +12,14 @@ public class DecToBinary {
         System.out.print("Enter a decimal number: ");
         Scanner sc = new Scanner(System.in);
         int dec = sc.nextInt();     //taking decimal number from user
+        sc.close();
+
+        int fl=0;
+        if(dec < 0) {       //checking if the number is negative
+            fl=1;
+            dec=(-dec);
+            System.out.println("This code does not support negative numbers.\n");
+        }
 
         long rev_bin=9;      //Stores the reverse of the binary
         //initializing rev_bin from 9(any non zero) since we want to include the zeroes in the binary
@@ -30,7 +36,10 @@ public class DecToBinary {
             rev_bin/=10;
         }
 
+        if(fl==1) {
+            System.out.println("Converted Binary : -"+bin);
+            return;
+        }
         System.out.println("Converted Binary : "+bin);
-        sc.close();
     }
 }

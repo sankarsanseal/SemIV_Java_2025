@@ -1,5 +1,5 @@
 /* 
-Parent Class Account to store Account Number and Account Balance.
+Parent Class Account to store Account Number and Account Balance
 having a constructor to initialize these values,
 and methods to get the values of these attributes.
 

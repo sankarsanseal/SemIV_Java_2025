@@ -34,13 +34,12 @@ public class StackLinkedList {
             temp.next = top;
         }
         top = temp;
+        System.out.println("Element "+info+" pushed successfully.");
     }
 
     public int pop() {          //Pop the top element of the stack and return its value
         int n = top.info;
-        Node temp = top;
         top=top.next;
-        temp = null;
         return n;
     }
 
@@ -58,19 +57,33 @@ public class StackLinkedList {
         return n;
     }
 
+    public void display() {      //Display the elements of the stack
+        Node temp = top;
+        if(temp == null) {
+            System.out.println("Stack is empty!");
+            return;
+        }
+        System.out.print("Elements in Stack: ");
+        while(temp != null) {
+            System.out.print(temp.info + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+
     //Main function
     public static void main(String[] args) {
         StackLinkedList stk = new StackLinkedList();
         Scanner sc = new Scanner(System.in);
 
         //Displaying the Menu
-        System.out.println("\n---STACK OPERATIONS---\n");
-        System.out.println("Menu:\n0: Exit\n1: PUSH\n2: POP\n3: PEEK(displays top element)\n4: Display no. of elements");
+        System.out.println("\n---STACK OPERATIONS---");
 
         int ch;     //Takes user choice
         do {
-            System.out.print("\nPress: ");
-            
+            System.out.println("\nMenu:\n0: Exit\n1: PUSH\n2: POP\n3: PEEK(displays top element)");
+            System.out.print("4: Display no. of elements\n5: Display Stack\n\nPress:");
+
             ch = sc.nextInt();
             switch(ch) {
                 case 0:
@@ -83,7 +96,7 @@ public class StackLinkedList {
                     break;
                 case 2:     //Pop operation
                     try{
-                        System.out.println("The element popped is "+stk.pop());
+                        System.out.println("The element popped is "+stk.pop()+".");
                     }
                     //Handling null exception if the stack is already empty
                     catch(NullPointerException e) {
@@ -92,7 +105,7 @@ public class StackLinkedList {
                     break;
                 case 3:     //Display top element of Stack
                     try{
-                        System.out.println("The top element is "+stk.peek());
+                        System.out.println("The top element is "+stk.peek()+".");
                     }
                     //Handling null exception if the stack is already empty
                     catch(NullPointerException e) {
@@ -100,8 +113,12 @@ public class StackLinkedList {
                     }
                     break;
                 case 4:     //Display number of elements
-                    System.out.println("Number of element in Stack is "+stk.items());
+                    System.out.println("Number of element in Stack is "+stk.items()+".");
                     break;
+                case 5:     //Display elements of Stack
+                    stk.display();
+                    break;
+
                 default:
                     System.out.println("Wrong Number!");
             }

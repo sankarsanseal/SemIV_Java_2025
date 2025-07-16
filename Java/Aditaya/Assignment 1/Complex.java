@@ -58,11 +58,13 @@ class ComplexNumber{     //class Definition
 public class Complex{
     public static void main(String args[]){     //main Function
         Scanner sc=new Scanner(System.in);
-        System.out.println("Enter real part and imaginary part of a complex number:");
+        System.out.print("Enter real part of complex number 1: ");
         int r=sc.nextInt();
+        System.out.print("Enter imaginary part of complex number 1: ");
         int i=sc.nextInt();
-        System.out.println("Enter real part and imaginary part of a complex number:");
+        System.out.print("\nEnter real part of complex number 2: ");
         int r2=sc.nextInt();
+        System.out.print("Enter imaginary part of complex number 2: ");
         int i2=sc.nextInt();
 
         ComplexNumber n1=new ComplexNumber(r,i);    //object declaration
@@ -74,10 +76,10 @@ public class Complex{
         
         ComplexNumber res=n1.getSum(n2);    //getSum method
 
-        System.out.print("\nSum of two complex Number is ");      
+        System.out.print("\nSum of two complex Number is :");      
         res.display();     
 
-        System.out.println("\nMagnitude is "+res.magnitude());     //magnitude method
+        System.out.println("\nMagnitude of sum is: "+res.magnitude());     //magnitude method
 
         sc.close();     //closing sc object
     }

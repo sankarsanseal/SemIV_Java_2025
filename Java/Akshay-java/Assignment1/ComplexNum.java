@@ -1,28 +1,33 @@
+/*
+Class to represent Complex Numbers and perform basic operations.
+It contains attributes for real and imaginary parts,
+provides constructors to initialize values,
+and includes methods to display the number, calculate sum, and compute magnitude.
+Author: Akshay Basak
+Date: 10-07-2025
+*/
 import java.util.*;
-public class ComplexNum 
+public class ComplexNum
 {
 	public static class Complex_Number {
 	    private int real;
 	    private int img;
-
 	    // Default Constructor
 	    public Complex_Number() {
 	        this.real = 0;
 	        this.img = 0;
 	    }
-
 	    // Parameterized Constructor
 	    public Complex_Number(int real, int img) {
 	        this.real = real;
 	        this.img = img;
 	    }
-
 	    // Copy Constructor
 	    public Complex_Number(Complex_Number c) {
 	        this.real = c.real;
 	        this.img = c.img;
 	    }
-	    
+	   
 	    //Method to add two Complex Numbers
 	    public Complex_Number getSum(Complex_Number c)
 	    {
@@ -30,7 +35,7 @@ public class ComplexNum
 	    	int newImg =  this.img + c.img;
 	    	return new Complex_Number(newReal , newImg);
 	    }
-	    
+	   
 	    //Method to display a Complex Number
 	    public void displayNumber()
 	    {
@@ -40,31 +45,29 @@ public class ComplexNum
 	    	}
 	    	else
 	    	{
-	    		System.out.println(real + "-" + img + "i");
+	    		System.out.println(real + "-" +  Math.abs(img) + "i");
 	    	}
 	    }
-	    
+	   
 	    //Magnitude of a Complex Numbers
 	    public double getMagnitude()
 	    {
 	    	return Math.sqrt(real*real + img*img);
 	    }
-	    
+	   
 	    //Getting only Real part
 	    public int getReal()
 	    {
 	    	return real;
 	    }
-	    
+	   
 	    //Getting only Imaginary part
 	    public int getImg()
 	    {
 	    	return img;
 	    }
 	}
-
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
 		
 		//Input 1st complex number
@@ -85,19 +88,14 @@ public class ComplexNum
 		Complex_Number sum = c1.getSum(c2);
 		
 		// Display results
-        System.out.print("First Number: ");
-        c1.displayNumber();
-
-        System.out.print("Second Number: ");
-        c2.displayNumber();
-
-        System.out.print("Sum: ");
-        sum.displayNumber();
-
-        System.out.println("Magnitude of first number: " + c1.getMagnitude());
-        System.out.println("Magnitude of second number: " + c2.getMagnitude());
-
-        sc.close();
-	}    
-
+       System.out.print("First Number: ");
+       c1.displayNumber();
+       System.out.print("Second Number: ");
+       c2.displayNumber();
+       System.out.print("Sum: ");
+       sum.displayNumber();
+       System.out.println("Magnitude of first number: " + c1.getMagnitude());
+       System.out.println("Magnitude of second number: " + c2.getMagnitude());
+       sc.close();
+	}   
 }

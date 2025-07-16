@@ -1,7 +1,7 @@
 /*
  * 
  * 
- * Author : Deepan Das
+ * Author : Deep an Das
  * 
  * Problem: 
  * 

@@ -14,7 +14,7 @@ class Bank {
         
         //Maturity Date for Fixed Deposit Account is set to one year from account creation date
         //Payment Frequency is set to 12 months
-        FixedDepositAccount acc3 = new FixedDepositAccount("97254529431", 300000, 7.5F, 365,LocalDate.now().plusYears(1) ,12);     
+        FixedDepositAccount acc3 = new FixedDepositAccount("97254529431", 300000, 7.5F, 365,LocalDate.of(2027, 01, 01) ,12);     
         
         //Displaying balance for each account
         System.out.println("Your balance in Saving Account: "+acc1.getAccountBalance());

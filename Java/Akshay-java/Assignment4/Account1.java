@@ -1,7 +1,14 @@
+/*
+Base class for different types of bank accounts such as Saving, Current, and Fixed Deposit.
+It contains attributes to store account number, balance, and opening date.
+It provides a constructor to initialize these values,
+and getter methods to access the account details.
+Author: Akshay Basak
+Date: 10-07-2025
+*/
 import java.time.LocalDate;
-
 public class Account1 {
-    String account_no;
+	String account_no;
 	double account_balance;
 	LocalDate account_opening_date;
 	

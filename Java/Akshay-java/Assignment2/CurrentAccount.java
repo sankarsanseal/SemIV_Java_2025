@@ -1,14 +1,25 @@
-class CurrentAccount extends Account {
-	double overdraft_limit;
-
-	CurrentAccount(String account_no , double account_balance ,double overdraft_limit)
+/*
+Sub class for Current Accounts inheriting data from Parent class Account.
+It has an attribute to store the overdraft limit.
+It has a constructor to initialize these values,
+and a method to retrieve the overdraft limit.
+Author: Akshay Basak
+Date: 10-07-2025
+*/
+//Represents a current account with overdraft
+public class CurrentAccount extends Account {
+	private double overdraft_limit;
+	// Constructor
+	public CurrentAccount(String account_no , double account_balance , double overdraft_limit)
 	{
 		super(account_no , account_balance);
 		this.overdraft_limit = overdraft_limit;
 	}
 	
-	double getOverdraftLimit()
+	public double getOverdraftLimit()
 	{
 		return overdraft_limit;
 	}
+	
 }
+

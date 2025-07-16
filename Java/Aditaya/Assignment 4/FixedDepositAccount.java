@@ -10,6 +10,7 @@ Date: 08-07-2025
 */
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 class FixedDepositAccount extends Account{
     public float interest_rate;                 //Stores the percentage a bank pays over time
@@ -21,9 +22,9 @@ class FixedDepositAccount extends Account{
     public LocalDate last_interest_paid_date;   //Stores the date of last paid interest
 
     //Constructor
-    FixedDepositAccount(String account_no, double account_balance, float interest_rate, 
+    FixedDepositAccount(String account_no, double account_balance, LocalDate account_open_date, float interest_rate, 
     int tenure_time_in_days, LocalDate maturity_date, int payment_frequency) {
-        super(account_no, account_balance, LocalDate.now());
+        super(account_no, account_balance, account_open_date);
         this.interest_rate=interest_rate;
         interest_accrued=0.0;
         interest_paid=0.0;
@@ -46,14 +47,31 @@ class FixedDepositAccount extends Account{
         return interest_paid;
     }
 
-    public void addInterest() {       //Method to add interest to the account
-        interest_accrued=account_balance*interest_rate/100;
-        last_interest_paid_date=LocalDate.now();
-        interest_paid+=interest_accrued;
+    public void addInterest() {         //Method to add interest to the account
+        
+        // No interest if balance is zero or negative
+        if (getAccountBalance() <= 0) {
+            return; 
+        }
+        
+        // Initialize if not set
+        if (last_interest_paid_date == null) {
+            last_interest_paid_date = getAccountOpenDate();
+        }
+
+        // Calculate the number of months since the last interest was paid
+        long months = ChronoUnit.MONTHS.between(last_interest_paid_date, LocalDate.now());
+        if (months > 0) {
+            interest_accrued = (getAccountBalance() * interest_rate * months) / (12*100);
+            interest_paid += interest_accrued;
+            last_interest_paid_date = LocalDate.now();
+        }
     }
 
     public double getMaturityAmount() {     
-        return account_balance+interest_paid;
+        account_balance+=interest_paid;
+        return account_balance;  //Returns the total amount in the account after maturity
+
     }
 
 }
