@@ -1,0 +1,91 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "JdbcConnectionExample02",
+            "request": "launch",
+            "mainClass": "JdbcConnectionExample02",
+            "projectName": "Java_698a4023"
+        },
+        {
+            "type": "java",
+            "name": "JdbcConnectionExample01",
+            "request": "launch",
+            "mainClass": "JdbcConnectionExample01",
+            "projectName": "Java_698a4023"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "Java_698a4023"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "ArgumentChecker",
+            "request": "launch",
+            "mainClass": "ArgumentChecker",
+            "projectName": "Java_698a4023"
+        },
+        {
+            "type": "java",
+            "name": "ComplexNumber",
+            "request": "launch",
+            "mainClass": "ComplexNumber",
+            "projectName": "Java_698a4023"
+        },
+        {
+            "type": "java",
+            "name": "DecimalToBinary",
+            "request": "launch",
+            "mainClass": "DecimalToBinary",
+            "projectName": "Java_698a4023"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Java_698a4023"
+        },
+        {
+            "type": "java",
+            "name": "PrimeNumber",
+            "request": "launch",
+            "mainClass": "PrimeNumber",
+            "projectName": "Java_698a4023"
+        },
+        {
+            "type": "java",
+            "name": "SortNames",
+            "request": "launch",
+            "mainClass": "SortNames",
+            "projectName": "Java_698a4023"
+        },
+        {
+            "type": "java",
+            "name": "Stack",
+            "request": "launch",
+            "mainClass": "Stack",
+            "projectName": "Java_698a4023"
+        },
+        {
+            "type": "java",
+            "name": "Test",
+            "request": "launch",
+            "mainClass": "Test",
+            "projectName": "Java_698a4023"
+        }
+    ]
+}

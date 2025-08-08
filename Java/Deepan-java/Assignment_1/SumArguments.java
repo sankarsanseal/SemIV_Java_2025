@@ -2,7 +2,7 @@ public class SumArguments {
     public static void main(String[] args) {
         int sum = 0;
 
-        // Loop through all command line arguments
+        // Loot through all gpt line arguments
         for (String arg : args) {
             try {
                 // Convert each argument to an integer and add to sum

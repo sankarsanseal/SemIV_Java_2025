@@ -7,5 +7,8 @@ class CurrentAccount2 extends Account2 {
     public double getOverdraftLimit() {
         return overdraft_limit;
     }
+    double getOverDrawnAmmount(){
+        return Math.max(0,overdraft_limit-account_balance);
+    }
 }
 

@@ -1,0 +1,9 @@
+DirectoryWithYourName
+    -> PackageAccess
+        ->PackageA
+            -> class SuperClassExample
+        ->PackageB
+            -> class SubClassExample
+        ->Main.java
+        
+    

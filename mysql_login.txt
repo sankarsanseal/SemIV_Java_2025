@@ -1,0 +1,7 @@
+SemIV2025@'cgcdeep-HP-Pavilion-Desktop-PC-570-p0xx.local'
+
+SemIV2025@'cgcdeep-HP-Pavilion-Desktop-PC-570-p0xx.local'
+
+
+ALTER USER 'SemIV2025'@'cgcdeep-HP-Pavilion-Desktop-PC-570-p0xx.local' IDENTIFIED WITH caching_sha2_password BY 'admin123';
+FLUSH PRIVILEGES

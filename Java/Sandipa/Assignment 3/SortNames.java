@@ -35,7 +35,7 @@ public class SortNames {
             BufferedWriter writer = new BufferedWriter(fileWriter);
             // Write each name to the file
             for (String sortedName : names) {
-                writer.write(sortedName);
+                writer.write(sortedName. toUpperCase());
                 writer.newLine(); // Move to the next line
             }
             writer.close(); // Close the writer
