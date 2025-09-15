@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class App {
     public static void main(String[] args) {
         // Change these to match your setup
-        String url = "jdbc:mysql://localhost:3306/SemIV2025"; // Replace testdb with your DB name
+        String url = "jdbc:mysql://cgcdeep-HP-Pavilion-Desktop-PC-570-p0xx.local/SemIV2025"; // Replace testdb with your DB name
         String user = "SemIV2025";                               // Your DB username
         String password = "admin123";                       // Your DB password
 

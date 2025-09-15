@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MouseClickSwing",
+            "request": "launch",
+            "mainClass": "MouseClickSwing",
+            "projectName": "Java_698a4023"
+        },
+        {
+            "type": "java",
+            "name": "MouseClicks",
+            "request": "launch",
+            "mainClass": "MouseClicks",
+            "projectName": "Java_698a4023"
+        },
+        {
+            "type": "java",
+            "name": "IPAddress",
+            "request": "launch",
+            "mainClass": "IPAddress",
+            "projectName": "Java_698a4023"
+        },
+        {
+            "type": "java",
+            "name": "Database",
+            "request": "launch",
+            "mainClass": "Database",
+            "projectName": "Java_698a4023"
+        },
+        {
+            "type": "java",
+            "name": "Check",
+            "request": "launch",
+            "mainClass": "Check",
+            "projectName": "Java_698a4023"
+        },
+        {
+            "type": "java",
+            "name": "Swing",
+            "request": "launch",
+            "mainClass": "Swing",
+            "projectName": "Java_698a4023"
+        },
+        {
+            "type": "java",
             "name": "JdbcConnectionExample02",
             "request": "launch",
             "mainClass": "JdbcConnectionExample02",

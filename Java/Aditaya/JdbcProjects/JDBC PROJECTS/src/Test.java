@@ -29,10 +29,13 @@ public class Test{
                 String id = rs.getString("ROLLNO");
                 String name = rs.getString("NAME");
                 String pname = rs.getString("PARENTS_NAME");
-                String sub = rs.getString("SUBJECT_NAME")
+                String sub = rs.getString("SUBJECT_NAME");
 
                 System.out.println(id + " | " + name + " | " + pname + " | " + sub);
             }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
